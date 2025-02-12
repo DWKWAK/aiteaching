@@ -462,34 +462,22 @@ body {
 }
 
 .skill-bar {
-    height: 4px;
+    height: 6px;
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 2px;
+    border-radius: 3px;
     overflow: hidden;
-    position: relative;
+    margin-top: 0.5rem;
 }
 
-.skill-bar::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
+.skill-bar-fill {
     height: 100%;
+    width: 0;
     background: linear-gradient(90deg, 
         var(--primary-color), 
-        var(--secondary-color), 
-        var(--primary-color)
+        var(--secondary-color)
     );
-    background-size: 200% 100%;
-    animation: gradient-move 3s linear infinite;
-    border-radius: 2px;
-    width: var(--width, 0%);
-    transition: width 1s ease;
-}
-
-@keyframes gradient-move {
-    0% { background-position: 100% 0; }
-    100% { background-position: -100% 0; }
+    border-radius: 3px;
+    transition: width 1.5s ease-in-out;
 }
 
 /* 추천사 섹션 스타일 전면 수정 */
@@ -883,7 +871,7 @@ section:first-of-type {
     }
 
     .skill-bar {
-        height: 6px;
+        height: 4px;
     }
 }
 
